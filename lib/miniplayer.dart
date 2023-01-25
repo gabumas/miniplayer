@@ -193,7 +193,7 @@ class _MiniplayerState extends State<Miniplayer> with TickerProviderStateMixin {
                 alignment: Alignment.bottomCenter,
                 child: Padding(
                   padding: EdgeInsets.only(
-                      bottom: (1 - _dragHeight / widget.maxHeight) *
+                      bottom: (1 - _dragHeight / widget.maxHeight).clamp(0, 1) *
                           widget.bottomMargin),
                   child: SizedBox(
                     height: height,
